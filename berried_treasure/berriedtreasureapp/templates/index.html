@@ -1,9 +1,20 @@
+{% load static %}
 <html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  </head>
   <body>
-    <h1>hi</h1>
+    <h1>Berried Treasure</h1>
     <form action="/results/" method="post">
       {% csrf_token %}
-      {{ form }}
+      {% for field in form %}
+      <div class="fieldWrapper">
+          {{ field.errors }}
+          {{ field.label_tag }} <br/>
+          {{ field }}
+      </div>
+      {% endfor %}
+      <br/>
       <input type="submit" value="Submit" />
     </form>
   </body>
