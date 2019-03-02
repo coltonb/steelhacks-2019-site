@@ -1,21 +1,27 @@
 {% load static %}
 <html>
   <head>
-      <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'bootstrap.min.css' %}"
+    />
   </head>
-  <body>
-    <h1>Berried Treasure</h1>
-    <form action="/results/" method="post">
-      {% csrf_token %}
-      {% for field in form %}
-      <div class="form-group">
+    <img src = "{% static 'piratemap.jpg' %}" style = "top:0;position:fixed;z-index:-9999;width:100%;height:100%;opacity:0.35" />
+    <div style = "padding-left:7%; padding-right:7%">
+      <h1 align = "center">Berried Treasure</h1>
+      <form action="/results/" method="post">
+        {% csrf_token %} {% for field in form %}
+        <div class="form-group">
           {{ field.errors }}
-          {{ field.label_tag }} <br/>
+          {{ field.label_tag }}
+          <br />
           {{ field }}
-      </div>
-      <br/>
-      {% endfor %}
-      <input type="submit" value="Submit" class ="btn btn-primary btn-lg" />
-    </form>
+        </div>
+        <br />
+        {% endfor %}
+        <input type="submit" value="Submit" class="btn btn-primary btn-lg" style = "width:100%;"/>
+      </form>
+    </div>
   </body>
 </html>
