@@ -1,4 +1,8 @@
+{% load static %}
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
     <body>
         {% for entry in entries %}
             <li>{{ entry.name }} - {{ entry.comment }} - {{ entry.date }}</li>
