@@ -3,5 +3,10 @@
 <body>
     <h1>I was never given a name</h1>
     <a href = "/results/">Go here</a>
+    <form action = "/results/" method = "post">
+        {% csrf_token %}
+        {{ form }}
+        <input type = 'submit' value = 'Submit'>
+    </form>
 </body>
 </html>
