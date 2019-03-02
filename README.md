@@ -28,3 +28,8 @@ How to develop in an MVT Framework, configuration of basic IoT networking, Setti
 
 Rebuild webserver to host it off of the Raspberry Pi, allowing multiple Pis to be hosted and registered to the server. This would allow the results of each Pi to be viewed from the cloud, while additional comments could only be added through local hotspot access.
 
+## Images
+
+![Image of the Captive Portal](https://raw.githubusercontent.com/coltonb/steelhacks-2019-site/master/imgs/captiveportal.png)
+![Image of the Comment List](https://raw.githubusercontent.com/coltonb/steelhacks-2019-site/master/imgs/comments.png)
+![Image of the Pi](https://raw.githubusercontent.com/coltonb/steelhacks-2019-site/master/imgs/pi.jpg)
