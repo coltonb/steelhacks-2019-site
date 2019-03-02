@@ -26,15 +26,7 @@
     </table>
 
     <script>
-      console.log(window.innerHeight);
-      function pageScroll() {
-        if ((window.innerHeight + window.scrollY) == document.body.offsetHeight) {
-          setTimeout(function() { window.location = "/results"; }, 3000);
-        }
-        window.scrollBy(0, 1);
-        scrolldelay = setTimeout(pageScroll, 30);
-      }
-      pageScroll();
+      setTimeout(function() { window.location = "/results" }, 3000);
     </script>
   </body>
 </html>

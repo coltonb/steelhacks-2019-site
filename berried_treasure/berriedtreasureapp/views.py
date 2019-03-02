@@ -16,4 +16,4 @@ def results(request):
             new_entry.save()
             return HttpResponseRedirect('/results')
     else:
-        return render(request, 'results.html', { 'entries' : Entry.objects.all() })
+        return render(request, 'results.html', { 'entries' : Entry.objects.all().order_by("-date")[:10] })
