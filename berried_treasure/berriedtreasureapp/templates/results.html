@@ -1,17 +1,40 @@
 {% load static %}
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    </head>
-    <body>
-        <table>
-        {% for entry in entries %}
-            <tr>
-                <td>
-                    <li>{{ entry.name }} - {{ entry.comment }} - {{ entry.date }}</li>
-                </td>
-            </tr>
-        {% endfor %}
-        </table>
-    </body>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'bootstrap.min.css' %}"
+    />
+  </head>
+  <body>
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Comment</th>
+      </tr>
+      {% for entry in entries %}
+      <tr>
+        <td>
+          <b>{{ entry.name }}</b>
+        </td>
+        <td>{{ entry.date }}</td>
+        <td>{{ entry.comment }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <script>
+      console.log(window.innerHeight);
+      function pageScroll() {
+        if ((window.innerHeight + window.scrollY) == document.body.offsetHeight) {
+          setTimeout(function() { window.location = "/results"; }, 3000);
+        }
+        window.scrollBy(0, 1);
+        scrolldelay = setTimeout(pageScroll, 30);
+      }
+      pageScroll();
+    </script>
+  </body>
 </html>
