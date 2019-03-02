@@ -1,5 +1,6 @@
 {% load static %}
 <html>
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
   <head>
     <link
       rel="stylesheet"
@@ -17,10 +18,10 @@
       {% for entry in entries %}
       <tr>
         <td>
-          <b>{{ entry.name }}</b>
+          <b style = "font-size:4vw">{{ entry.name }}</b>
         </td>
-        <td>{{ entry.date }}</td>
-        <td>{{ entry.comment }}</td>
+        <td style = "font-size:3vw">{{ entry.date }}</td>
+        <td style = "font-size:3vw">{{ entry.comment }}</td>
       </tr>
       {% endfor %}
     </table>
