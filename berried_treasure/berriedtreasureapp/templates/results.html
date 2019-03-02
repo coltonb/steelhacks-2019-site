@@ -4,8 +4,14 @@
         <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     </head>
     <body>
+        <table>
         {% for entry in entries %}
-            <li>{{ entry.name }} - {{ entry.comment }} - {{ entry.date }}</li>
+            <tr>
+                <td>
+                    <li>{{ entry.name }} - {{ entry.comment }} - {{ entry.date }}</li>
+                </td>
+            </tr>
         {% endfor %}
+        </table>
     </body>
 </html>
