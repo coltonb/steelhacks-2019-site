@@ -14,6 +14,6 @@ def results(request):
         if form.is_valid():
             new_entry = Entry(name=form.cleaned_data['name'], comment=form.cleaned_data['comment'])
             new_entry.save()
-            return HttpResponseRedirect('results')
+            return HttpResponseRedirect('/results')
     else:
-        return render(request, 'results.html', { 'entries' : Entry.objects.all() })
+        return render(request, 'results.html', { 'entries' : Entry.objects.all().order_by("-date")[:8] })
