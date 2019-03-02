@@ -5,5 +5,5 @@ from django.db import models
 class Entry(models.Model):
     name = models.CharField(max_length=12)
     date = models.DateTimeField(auto_now=True)
-    comment = models.TextField(max_length=280)
+    comment = models.TextField(max_length=80)
     
